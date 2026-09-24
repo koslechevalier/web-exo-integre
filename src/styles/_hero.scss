@@ -1,0 +1,97 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+//===SECTION===//
+.hero {
+  @include m.container;
+  position: relative;
+  overflow:visible;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: v.$space-xl;
+  padding-block: v.$space-xl;
+}
+
+//===FORME DE FOND (rotation)===//
+.hero__bg {
+  position: absolute;
+  inset: -6% -2%;
+  background-color: v.$color-teal;
+  transform: rotate(-1.5deg);
+  z-index: 0;
+  block-size: 10rem;
+}
+
+//===TEXTE===//
+.hero__text {
+  flex: 1 1 400px;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: v.$space-sm;
+  flex: 1 1 400px;
+}
+
+.hero__subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xs;
+}
+
+//===BOUTON CTA===//
+.hero__cta {
+  display: inline-block;
+  margin-top: v.$space-sm;
+  padding: v.$space-sm v.$space-lg;
+  background-color: v.$color-yellow;
+  color: v.$color-dark;
+  font-weight: 700;
+  border: v.$border-width solid v.$color-dark;
+  border-radius: v.$radius-sm;
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline-color: v.$color-dark;
+  }
+}
+
+//===IMAGE===//
+.hero__image {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 300px;
+  min-width: 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+//===RESPONSIVE - MOBILE===//
+@media (max-width: v.$bp-tablet) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__text {
+    align-items: center;
+  }
+}

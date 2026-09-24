@@ -1,0 +1,116 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+//===CONTENEUR===//
+.nav {
+  @include m.container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: v.$space-sm;
+  padding-block: v.$space-sm;
+  background-color: v.$color-cream;
+}
+
+//===LOGO===//
+.nav__logo {
+  display: block;
+  flex-shrink: 0;
+
+  img {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+}
+
+//===LISTE DES PAGES===//
+.nav__page-list {
+  display: flex;
+  align-items: center;
+  gap: v.$space-md;
+  flex-wrap: wrap;
+}
+
+.nav__page-item {
+  display: flex;
+}
+
+//===LIENS COMMUNS===//
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-xs;
+  padding-block: v.$space-xs;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+
+  img {
+    height: 18px;
+    width: 18px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+//===LIEN DE PAGE ACTIF===//
+.nav__page-item .nav__link {
+  position: relative;
+  padding-bottom: calc(#{v.$space-xs} + 6px);
+  border-bottom: v.$border-width dotted transparent;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: v.$border-width dotted transparent;
+  }
+}
+
+.nav__page-item .nav__link.is-active {
+  border-bottom-color: v.$color-dark;
+
+  &::after {
+    border-bottom-color: v.$color-yellow;
+  }
+}
+
+//===LISTE DES LANGUES===//
+.nav__lang-list {
+  display: flex;
+  gap: v.$space-xs;
+}
+
+.nav__lang-item {
+  .nav__link {
+    padding: v.$space-xs v.$space-sm;
+    border: v.$border-width dotted v.$color-light-grey;
+    color: v.$color-grey;
+  }
+}
+
+//===LANGUE ACTIVE===//
+.nav__lang-item .nav__link.is-active {
+  background-color: v.$color-yellow;
+  border-color: v.$color-yellow;
+  color: v.$color-black;
+}
+
+//===RESPONSIVE - MOBILE===//
+@media (max-width: v.$bp-tablet) {
+  .nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav__page-list,
+  .nav__lang-list {
+    justify-content: center;
+    width: 100%;
+  }
+}
