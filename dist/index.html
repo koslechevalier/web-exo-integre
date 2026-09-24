@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Kings</title>
+    <link rel="stylesheet" href="~/../../dist/styles/main.min.css" />
+    <script src="../src/scripts/script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="index.html" class="nav__logo"><img src="../src/images/logo/LOGO-FULL.svg" alt=""/></a>
+        <ul class="nav__page-list">
+          <li class="nav__page-item">
+            <a href="~/../index.html" class="nav__link is-active"><img src="../src/images/icons/icon-accueil.svg" alt=""/>Accueil</a>
+          </li>
+          <li class="nav__page-item">
+            <a href="~/../jouer.html" class="nav__link"><img src="../src/images/icons/icon-jouer.svg" alt=""/>Jouer</a>
+          </li>
+          <li class="nav__page-item">
+            <a href="~/../classement.html" class="nav__link"><img src="../src/images/icons/icon-classement.svg" alt=""/>Classement</a>
+          </li>
+        </ul>
+        <ul class="nav__lang-list">
+          <li class="nav__lang-item"><a href="#" class="nav__link is-active">FR</a></li>
+          <li class="nav__lang-item"><a href="#" class="nav__link">NL</a></li>
+          <li class="nav__lang-item"><a href="#" class="nav__link">DE</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__text">
+        <h1 class="hero__title">Deviens le Roi de la réplique !</h1>
+        <div class="hero__subtitle">
+        <h2 class="hero__sub-subtitle">Reconnais la réplique et choisis le bon film. Grimpe au classement et tente de gagner des places.</h2>
+    </div>
+    <a href="../jouer.html" class="hero__cta">Jouer maintenant</a>
+  </div>
+  <div class="hero__image">
+    <picture>
+      <source media="(max-width: 767px)" srcset="../src/images/others/gfiche_movie_king.png"/>
+      <source media="(min-width: 768px)" srcset="../src/images/others/gfiche_movie_king.png"/>
+      <img src="../src/images/others/gfiche_movie_king.png" alt="Illustration du mot roi assis sur un fauteuil rose"/>
+    </picture>
+  </div>
+  </section>
+
+      <section class="tuto">
+        <div class="tuto__header">
+          <h2 class="u-surtitle">Phase du jeu</h2>
+          <h3 class="u-title">Comment jouer ?</h3>
+          <p class="u-body">
+            Chaque semaine, les meilleurs joueurs sont couronnés et remportent des
+            récompenses.
+          </p>
+        </div>
+        <ol class="tuto__container">
+          <li class="tuto__item">
+            <h4 class="tuto__step">
+              <span class="tuto__number">1</span>Lis la réplique
+            </h4>
+            <p class="u-body-s">
+              Toujours culte, en VO ou en VF, selon la catégorie que tu as
+              choisie.
+            </p>
+          </li>
+          <li class="tuto__item">
+            <h4 class="tuto__step">
+              <span class="tuto__number">2</span>Devine le film
+            </h4>
+            <p class="u-body-s">
+              Dévoile les propositions ou devine directement pour gagner plus de
+              points !
+            </p>
+          </li>
+          <li class="tuto__item">
+            <h4 class="tuto__step">
+              <span class="tuto__number">3</span>Gagne des points
+            </h4>
+            <p class="u-body-s">
+              Décroche la couronne et tente de gagner des places de cinéma.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="daily">
+        <div class="daily__image">
+          <picture>
+            <source media="" srcset="../src/images/mascot/ghoster-blue-happy.svg"/>
+            <img src="../src/images/mascot/ghoster-blue-happy.svg" alt="Illustration d'un fantôme souriant"/>
+          </picture>
+          <picture>
+            <source media="" srcset="../src/images/others/crown.svg" />
+            <img src="../src/images/others/crown.svg" alt="Illustration d'une couronne"/>
+          </picture>
+        </div>
+        <div class="daily__text">
+          <div class="daily__header">
+            <!--<h2 class="u-surtitle">///</h2>-->
+            <h2 class="u-title">Cultissime</h2>
+            <p class="u-body">
+              → Citation du jour à retrouver.
+              <span class="u-strong">Teste-toi !</span>
+            </p>
+          </div>
+          <div class="daily__box">
+            <h4 class="daily__box-title">Il nous faudrait un plus gros bâteau</h4>
+            <div class="daily__box-bottom">
+              <p class="u-body-s">La réponse est cachée pour ne pas gâcher le plaisir. Tu ne trouves pas ?</p>
+              <button type="button" class="daily__cta" data-reveal-target="reveal-1">Découvre la réponse →</button>
+              <details class="reveal__answer" id="reveal-1">
+                <summary class="reveal__trigger">Révéler la réponse</summary>
+                <p class="reveal__content">Les Dents de la mer</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="category">
+        <div class="category__header">
+          <h2 class="u-surtitle">Catégories</h2>
+          <h3 class="u-title">Explore les catégories</h3>
+          <p class="u-body">Choisis l'univers qui te fait vibrer et découvre de nouvelles répliques à chaque session.</p>
+        </div>
+        <div class="category__container">
+          <div class="category__card category__card--action">
+            <img src="../src/images/icons/dark.svg" alt="" class="category__card-icon category__card-icon--action"/>
+            <h4 class="category__card-title">Action</h4>
+            <p class="u-body-s">Poursuites, héros et répliques qui restent dans les annales du cinéma d'action.</p>
+          </div>
+          <div class="category__card category__card--comedy">
+            <img src="../src/images/icons/dark.svg" alt="" class="category__card-icon category__card-icon--comedy"/>
+            <h4 class="category__card-title">Comédie</h4>
+            <p class="u-body-s">Répliques cultes, personnages inoubliables et humour qui fait encore rire aujourd'hui</p>
+          </div>
+          <div class="category__card category__card--drama">
+            <img src="../src/images/icons/dark.svg" alt="" class="category__card-icon category__card-icon--drama"/>
+            <h4 class="category__card-title">Drame</h4>
+            <p class="u-body-s">Moments forts, personnages complexes et dialogues qui restent en mémoire.</p>
+          </div>
+          <div class="category__card category__card--scifi">
+            <img src="../src/images/icons/dark.svg" alt="" class="category__card-icon category__card-icon--scifi"/>
+            <h4 class="category__card-title">Science-fiction</h4>
+            <p class="u-body-s">Mondes futurs, héros légendaires et répliques interstellaires.</p>
+          </div>
+          <div class="category__card category__card--horror">
+            <img src="../src/images/icons/dark.svg" alt="" class="category__card-icon category__card-icon--horror"/>
+            <h4 class="category__card-title">Horreur</h4>
+            <p class="u-body-s">Répliques glaçantes, suspense et frissons garantis.</p>
+          </div>
+          <div class="category__card category__card--animation">
+            <img src="../src/images/icons/dark.svg" alt="" class="category__card-icon category__card-icon--animation"/>
+            <h4 class="category__card-title">Animation</h4>
+            <p class="u-body-s">Répliques inoubliables des films d'animation qui font sourire petits et grands.</p>
+          </div>
+          <div class="category__card category__card--classic">
+            <img src="../src/images/icons/dark.svg" alt="" class="category__card-icon category__card-icon--classic"/>
+            <h4 class="category__card-title">Classiques</h4>
+            <p class="u-body-s">Répliques emblématiques des films qui ont marqué l'histoire du cinéma.</p>
+          </div>
+          <div class="category__card category__card--cult">
+            <img src="../src/images/icons/dark.svg" alt="" class="category__card-icon category__card-icon--cult"/>
+            <h4 class="category__card-title">Cultes</h4>
+            <p class="u-body-s">Ces répliques que tout le monde connaît, même sans avoir vu le film.</p>
+          </div>
+        </div>
+      </section>
+
+    <footer class="footer">
+      <div class="footer__brand">
+      <img src="../src/images/logo/LOGO-FULL.svg" alt="" class="footer__logo"/>
+      <p class="footer__copyright">© 2027 Movie Kings</p>
+      </div>
+      <ul class="footer__social-list">
+        <li class="footer__social-item"><a href="#" class="footer__link">Instagram</a></li>
+        <li class="footer__social-item"><a href="#" class="footer__link">TikTok</a></li>
+        <li class="footer__social-item"><a href="#" class="footer__link">YouTube</a></li>
+        <li class="footer__social-item"><a href="#" class="footer__link">Discord</a></li>
+      </ul>
+    </footer>
+
+  </body>
+</html>
