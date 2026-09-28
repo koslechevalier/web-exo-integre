@@ -1,6 +1,6 @@
 @use 'variables' as v;
 
-//===STRUCTURE GENERALE===//
+//======STRUCTURE_GENERALE======//
 html {
   scroll-behavior: smooth;
 }
@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
 }
 
-//===RYTHME VERTICAL ENTRE SECTIONS===//
+//======RYTHME_VERTICAL_SECTIONS======//
 section {
   padding-block: v.$space-xl;
 }

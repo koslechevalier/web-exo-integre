@@ -1,0 +1,114 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+//======CATEGORIES======//
+$categories: (
+  'action' v.$color-action 0,
+  'comedy' v.$color-comedy 1,
+  'drama' v.$color-drama 2,
+  'scifi' v.$color-scifi 3,
+  'horror' v.$color-horror 4,
+  'animation' v.$color-animation 5,
+  'classics' v.$color-classics 6,
+  'cult' v.$color-cult 7
+);
+
+$icons-count: 8;
+
+//======COULEURS_CATÉGORIES======//
+$categories: (
+  'action': v.$color-action,
+  'comedy': v.$color-comedy,
+  'drama': v.$color-drama,
+  'scifi': v.$color-scifi,
+  'horror': v.$color-horror,
+  'animation': v.$color-animation,
+  'classics': v.$color-classics,
+  'cult': v.$color-cult
+);
+
+//======SECTION_CATEGORY======//
+.category {
+  background-color: v.$color-dark;
+  color: v.$color-cream;
+  padding: v.$space-xl v.$space-md;
+
+  &__header {
+    margin-bottom: v.$space-lg;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$space-md;
+  }
+
+  &__card {
+    padding: v.$space-md;
+    background-color: v.$color-black;
+    border: 1px solid rgba(v.$color-cream, 0.1);
+
+    .u-body-s {
+      margin: 0;
+      color: v.$color-light-grey;
+    }
+  }
+
+  &__card-icon {
+    display: block;
+    box-sizing: border-box;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    margin-bottom: v.$space-sm;
+    border-radius: v.$radius-max;
+    background-image: url('~/src/images/icons/light.svg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: #{$icons-count * 100%} 100%;
+  }
+
+  @each $name, $color, $index in $categories {
+    &__card--#{$name} &__card-title {
+      color: $color;
+    }
+
+    &__card-icon--#{$name} {
+      background-color: $color;
+      background-position: calc(#{$index} * 100% / #{$icons-count - 1}) 50%;
+    }
+  }
+
+  &__card-title {
+    margin: 0 0 v.$space-xs;
+    font-family: v.$font-title;
+    font-size: v.$fs-h3;
+    font-weight: 700;
+  }
+
+  @each $name, $color in $categories {
+    &__card--#{$name} &__card-title {
+      color: $color;
+    }
+
+    &__card-icon--#{$name} {
+      background-color: $color;
+    }
+  }
+
+  //======TABLET======//
+  @media (min-width: v.$bp-tablet) {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  //======DESKTOP======//
+  @media (min-width: v.$bp-desktop) {
+    padding: v.$space-xl calc((100% - #{v.$container-max-width}) / 2);
+
+    &__container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

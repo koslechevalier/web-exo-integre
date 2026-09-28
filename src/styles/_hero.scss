@@ -1,7 +1,7 @@
 @use 'variables' as v;
 @use 'mixin' as m;
 
-//===SECTION===//
+//======SECTION======//
 .hero {
   @include m.container;
   position: relative;
@@ -14,7 +14,7 @@
   padding-block: v.$space-xl;
 }
 
-//===FORME===//
+//======FORME======//
 .hero__bg {
   position: absolute;
   inset: 2% -2%;
@@ -28,7 +28,7 @@
   font-size: 20px;
 }
 
-//===TEXTE===//
+//======TEXTE======//
 .hero__title {
   font-family: v.$font-title;
   font-size: 4rem;
@@ -57,9 +57,10 @@
   gap: v.$space-xs;
 }
 
-//===BOUTON CTA===//
+//======BOUTON_CTA======//
 .hero__cta {
   display: inline-block;
+  font-family: v.$font-body;
   margin-top: v.$space-sm;
   padding: v.$space-sm v.$space-lg;
   background-color: v.$color-yellow;
@@ -82,7 +83,7 @@
   }
 }
 
-//===IMAGE===//
+//======IMAGE======//
 .hero__image {
   position: relative;
   z-index: 1;
@@ -98,7 +99,7 @@
   }
 }
 
-//===RESPONSIVE - MOBILE===//
+//======RESPONSIVE_MOBILE======//
 @media (max-width: v.$bp-tablet) {
   .hero {
     flex-direction: column;

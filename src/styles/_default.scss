@@ -1,6 +1,6 @@
 @use 'variables' as v;
 
-//===BODY===//
+//======BODY======//
 body {
   background-color: v.$color-cream;
   color: v.$color-dark;
@@ -9,7 +9,7 @@ body {
   line-height: 1.5;
 }
 
-//===TITRES===//
+//======TITRES======//
 h1,
 h2,
 h3 {
@@ -42,13 +42,13 @@ p {
   margin: 0;
 }
 
-//===LIENS===//
+//======LIENS======//
 a {
   color: inherit;
   text-decoration: none;
 }
 
-//===LISTES===//
+//======LISTES======//
 ul,
 ol {
   margin: 0;
@@ -56,8 +56,15 @@ ol {
   list-style: none;
 }
 
-//===ACCESSIBILITE - FOCUS CLAVIER===//
+//======ACCESSIBILITE_FOCUS======//
 :focus-visible {
   outline: v.$border-width solid v.$color-yellow;
   outline-offset: 2px;
 }
+
+ .u-surtitle {
+      font-family: v.$font-title;
+      color: v.$color-coral;
+      text-transform: uppercase;
+      font-size: v.$fs-label;
+    }

@@ -1,7 +1,7 @@
 @use 'variables' as v;
 @use 'mixin' as m;
 
-//===CONTENEUR===//
+//======CONTENEUR======//
 .nav {
   @include m.container;
   display: flex;
@@ -14,7 +14,7 @@
   border-bottom: 0.8rem solid v.$color-black;
 }
 
-//===LOGO===//
+//======LOGO======//
 .nav__logo {
   display: block;
   flex-shrink: 0;
@@ -26,7 +26,7 @@
   }
 }
 
-//===LISTE DES PAGES===//
+//======LISTE DES PAGES======//
 .nav__page-list {
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@
   display: flex;
 }
 
-//===LIENS COMMUNS===//
+//======LIENS COMMUNS======//
 .nav__link {
   display: inline-flex;
   align-items: center;
@@ -57,7 +57,7 @@
   }
 }
 
-//===LIEN DE PAGE ACTIF===//
+//======LIEN_ACTIF======//
 .nav__page-item .nav__link {
   position: relative;
   padding-bottom: calc(#{v.$space-xs} + 6px);
@@ -81,7 +81,7 @@
   }
 }
 
-//===LISTE DES LANGUES===//
+//======LISTE_LANGUES======//
 .nav__lang-list {
   display: flex;
   gap: v.$space-xs;
@@ -95,14 +95,14 @@
   }
 }
 
-//===LANGUE ACTIVE===//
+//======LANGUE_ACTIVE======//
 .nav__lang-item .nav__link.is-active {
   background-color: v.$color-yellow;
   border-color: v.$color-yellow;
   color: v.$color-black;
 }
 
-//===RESPONSIVE - MOBILE===//
+//======TABLET======//
 @media (max-width: v.$bp-tablet) {
   .nav {
     justify-content: center;
@@ -115,3 +115,4 @@
     width: 100%;
   }
 }
+

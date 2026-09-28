@@ -1,0 +1,157 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+//======SECTION_DAILY======//
+.daily {
+  position: relative;
+  z-index: 1;
+  background-color: v.$color-coral;
+  color: v.$color-dark;
+  padding: v.$space-xl v.$space-sm;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-lg;
+
+  //======IMAGE======//
+  &__image {
+    position: relative;
+    width: 15rem;
+    padding-top: 20rem;
+    margin: 0 auto;
+
+    picture:first-child img {
+      display: block;
+      width: 75%;
+      margin: 0 auto;
+      transform: translateY(-9rem)
+    }
+
+    picture:last-child {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-39%);
+      width: 100%;
+    }
+
+    picture:last-child img {
+      display: block;
+      width: 80%;
+    }
+  }
+
+  //======TEXTE======//
+  &__header {
+    margin-bottom: v.$space-md;
+
+    .u-title,
+    .u-body {
+      color: v.$color-dark;
+    }
+
+    .u-body {
+      margin: 0;
+    }
+  }
+
+  //======PHYLACTÈRE======//
+  &__box {
+    position: relative;
+    background-color: v.$color-dark;
+    color: v.$color-cream;
+    padding: v.$space-md;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2rem;
+      left: -1.9rem;
+      width: 2rem;
+      height: 2rem;
+      background-color: v.$color-dark;
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+  }
+
+  &__box-title {
+    margin: 0 0 v.$space-sm;
+    font-family: v.$font-title;
+    font-size: v.$fs-h4;
+    font-weight: 700;
+  }
+
+  &__box-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$space-sm;
+    align-items: center;
+
+    .u-body-s {
+      margin: 0;
+    }
+  }
+
+  //======LIEN======//
+  &__cta {
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: v.$fs-body-s;
+    font-weight: 700;
+    color: v.$color-coral;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  //======BOUTON======//
+  .reveal__trigger {
+    display: inline-block;
+    padding: v.$space-xs v.$space-md;
+    background-color: v.$color-yellow;
+    color: v.$color-dark;
+    font-weight: 700;
+    border-radius: v.$radius-sm;
+    cursor: pointer;
+    list-style: none; // enlève la flèche par défaut
+
+    &::-webkit-details-marker {
+      display: none; // idem pour Safari
+    }
+  }
+
+  .reveal__content {
+    margin: v.$space-sm 0 0;
+    font-weight: 700;
+    color: v.$color-cream;
+  }
+
+  //======TABLET======//
+  @media (min-width: v.$bp-tablet) {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    &__image {
+      align-self: end;
+      margin-bottom: -6rem; // le fantôme dépasse sur la section suivante
+    }
+
+    &__box-bottom {
+      grid-template-columns: 1fr auto;
+    }
+
+    &__cta {
+      grid-column: 1;
+    }
+
+    .reveal__answer {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+  }
+
+  //======DESKTOP======//
+  @media (min-width: v.$bp-desktop) {
+    padding: v.$space-xl calc((100% - #{v.$container-max-width}) / 2) 3rem;
+  }
+}

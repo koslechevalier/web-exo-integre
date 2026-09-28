@@ -1,6 +1,6 @@
 @use 'variables' as v;
 
-//===CONTENEUR CENTRE===//
+//======CONTENEUR_CENTRE======//
 @mixin container {
   width: 100%;
   max-width: v.$container-max-width;

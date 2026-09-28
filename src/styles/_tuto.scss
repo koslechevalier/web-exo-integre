@@ -1,0 +1,69 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+//======SECTION_TUTO======//
+.tuto {
+  background-color: v.$color-dark;
+  color: v.$color-cream;
+  padding: v.$space-xxl v.$space-xxl;
+
+  //======HEADER======//
+  &__header {
+    margin-bottom: v.$space-lg;
+  }
+
+  //======LIST======//
+  &__container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$space-md;
+  }
+
+  //======STEP======//
+  &__item {
+    padding: v.$space-md 0;
+    border-top: v.$border-width dotted v.$color-grey;
+    border-bottom: v.$border-width dotted v.$color-grey;
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    gap: v.$space-sm;
+    margin: 0 0 v.$space-xs;
+    font-family: v.$font-title;
+    font-size: v.$fs-h4;
+    font-weight: 700;
+    color: v.$color-cream;
+  }
+
+  //======NUMBER======//
+  &__number {
+    font-family: v.$font-mono;
+    font-size: v.$fs-h1;
+    font-weight: 300;
+    line-height: 1;
+    color: v.$color-coral;
+  }
+
+  //======DESCRIPTION======//
+  .u-body-s {
+    margin: 0;
+    color: v.$color-light-grey;
+  }
+
+  //======TABLET======//
+  @media (min-width: v.$bp-tablet) {
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  //======DESKTOP======//
+  @media (min-width: v.$bp-desktop) {
+    padding: v.$space-xl calc((100% - #{v.$container-max-width}) / 2);
+  }
+}
