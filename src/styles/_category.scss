@@ -29,9 +29,14 @@ $categories: (
 
 //======SECTION_CATEGORY======//
 .category {
+  @include m.container;
+  @include m.section-spacing;
   background-color: v.$color-dark;
   color: v.$color-cream;
   padding: v.$space-xl v.$space-md;
+  background-image: url('../../src/images/patterns/pattern-dark.png');
+  background-repeat: repeat;
+  background-size: 200px auto;
 
   &__header {
     margin-bottom: v.$space-lg;
@@ -62,7 +67,8 @@ $categories: (
     padding: 0.75rem;
     margin-bottom: v.$space-sm;
     border-radius: v.$radius-max;
-    background-image: url('~/src/images/icons/light.svg');
+    //===je dois encore régler ce souci je pensais que c'était un problème de z-index mais c'est pas le cas===//
+    background-image: url('../../src/images/icons/categories.svg');
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size: #{$icons-count * 100%} 100%;
@@ -83,7 +89,7 @@ $categories: (
     margin: 0 0 v.$space-xs;
     font-family: v.$font-title;
     font-size: v.$fs-h3;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   @each $name, $color in $categories {

@@ -3,14 +3,19 @@
 
 //======SECTION_DAILY======//
 .daily {
+  @include m.container;
+  @include m.section-spacing;
   position: relative;
   z-index: 1;
   background-color: v.$color-coral;
   color: v.$color-dark;
-  padding: v.$space-xl v.$space-sm;
+  padding: v.$space-sm v.$space-sm;
   display: grid;
   grid-template-columns: 1fr;
   gap: v.$space-lg;
+  background-image: url('../../src/images/patterns/pattern-red.png');
+  background-repeat: repeat;
+  background-size: 200px auto;
 
   //======IMAGE======//
   &__image {
@@ -105,29 +110,51 @@
   }
 
   //======BOUTON======//
+  .reveal__answer {
+    position: relative;
+  }
+
   .reveal__trigger {
-    display: inline-block;
+    display: block;
     padding: v.$space-xs v.$space-md;
     background-color: v.$color-yellow;
     color: v.$color-dark;
     font-weight: 700;
+    text-align: center;
+    border: v.$border-width solid v.$color-yellow;
     border-radius: v.$radius-sm;
     cursor: pointer;
-    list-style: none; // enlève la flèche par défaut
+    list-style: none;
 
     &::-webkit-details-marker {
-      display: none; // idem pour Safari
+      display: none;
     }
   }
 
   .reveal__content {
-    margin: v.$space-sm 0 0;
+    margin: 0;
+    padding: v.$space-xs v.$space-md;
+    background-color: transparent;
+    color: v.$color-yellow;
     font-weight: 700;
-    color: v.$color-cream;
+    text-align: center;
+    border: v.$border-width dashed v.$color-yellow;
+    border-radius: v.$radius-sm;
+  }
+
+  .reveal__answer[open] .reveal__trigger {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+
+  .reveal__answer[open]:focus-within .reveal__content {
+    outline: 2px solid v.$color-cream;
+    outline-offset: 2px;
   }
 
   //======TABLET======//
-  @media (min-width: v.$bp-tablet) {
+  @include m.tablet {
     grid-template-columns: auto 1fr;
     align-items: center;
 
@@ -151,7 +178,7 @@
   }
 
   //======DESKTOP======//
-  @media (min-width: v.$bp-desktop) {
+  @include m.desktop {
     padding: v.$space-xl calc((100% - #{v.$container-max-width}) / 2) 3rem;
   }
 }

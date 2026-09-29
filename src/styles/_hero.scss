@@ -4,6 +4,7 @@
 //======SECTION======//
 .hero {
   @include m.container;
+  padding-inline: v.$space-xxl;
   position: relative;
   overflow: visible;
   display: flex;
@@ -11,7 +12,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: v.$space-xl;
-  padding-block: v.$space-xl;
 }
 
 //======FORME======//
@@ -21,7 +21,7 @@
   background-color: v.$color-teal;
   transform: rotate(-1deg);
   z-index: 0;
-  block-size: 35rem;
+  block-size: 38rem;
 }
 
 .hero__sub-subtitle {
