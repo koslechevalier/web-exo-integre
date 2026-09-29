@@ -15,18 +15,6 @@ $categories: (
 
 $icons-count: 8;
 
-//======COULEURS_CATÉGORIES======//
-$categories: (
-  'action': v.$color-action,
-  'comedy': v.$color-comedy,
-  'drama': v.$color-drama,
-  'scifi': v.$color-scifi,
-  'horror': v.$color-horror,
-  'animation': v.$color-animation,
-  'classics': v.$color-classics,
-  'cult': v.$color-cult
-);
-
 //======SECTION_CATEGORY======//
 .category {
   @include m.container;
@@ -48,7 +36,7 @@ $categories: (
     gap: v.$space-md;
   }
 
-  &__card {
+  .container__card {
     padding: v.$space-md;
     background-color: v.$color-black;
     border: 1px solid rgba(v.$color-cream, 0.1);
@@ -59,60 +47,63 @@ $categories: (
     }
   }
 
-  &__card-icon {
-    display: block;
-    box-sizing: border-box;
-    width: 3rem;
-    height: 3rem;
-    padding: 0.75rem;
+  .card__header {
     margin-bottom: v.$space-sm;
-    border-radius: v.$radius-max;
-    //===je dois encore régler ce souci je pensais que c'était un problème de z-index mais c'est pas le cas===//
-    background-image: url('../../src/images/icons/categories.svg');
-    background-repeat: no-repeat;
-    background-origin: content-box;
-    background-size: #{$icons-count * 100%} 100%;
   }
 
-  @each $name, $color, $index in $categories {
-    &__card--#{$name} &__card-title {
-      color: $color;
-    }
+//======FOUTUES-ICONES======//
 
-    &__card-icon--#{$name} {
-      background-color: $color;
-      background-position: calc(#{$index} * 100% / #{$icons-count - 1}) 50%;
-    }
+&__card-icon {
+  display: block;
+  box-sizing: border-box;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.75rem;
+  margin-bottom: v.$space-sm;
+  border-radius: v.$radius-max;
+  background-image: url('../../src/images/icons/categories.svg');
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: auto auto;
+  background-position: -1.5rem -1.5rem;
+}
+
+&__card-title {
+  margin: 0 0 v.$space-xs;
+  font-family: v.$font-title;
+  font-size: v.$fs-h3;
+  font-weight: 600;
+}
+
+@each $name, $color in $categories {
+  .card--#{$name} &__card-title {
+    color: $color;
   }
 
-  &__card-title {
-    margin: 0 0 v.$space-xs;
-    font-family: v.$font-title;
-    font-size: v.$fs-h3;
-    font-weight: 600;
+  &__card-icon--#{$name} {
+    background-color: $color;
   }
+}
 
-  @each $name, $color in $categories {
-    &__card--#{$name} &__card-title {
-      color: $color;
-    }
+&__card-icon--action    { background-position-x: -25px; }
+&__card-icon--comedy    { background-position-x: -65px; }
+&__card-icon--drama     { background-position-x: -105px; }
+&__card-icon--scifi     { background-position-x: -145px; }
+&__card-icon--horror    { background-position-x: -185px; }
+&__card-icon--animation { background-position-x: -225px; }
+&__card-icon--classics  { background-position-x: -265px; }
+&__card-icon--cult      { background-position-x: -305px; }
 
-    &__card-icon--#{$name} {
-      background-color: $color;
-    }
-  }
 
   //======TABLET======//
-  @media (min-width: v.$bp-tablet) {
+  @include m.tablet {
     &__container {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   //======DESKTOP======//
-  @media (min-width: v.$bp-desktop) {
-    padding: v.$space-xl calc((100% - #{v.$container-max-width}) / 2);
-
+  @include m.desktop {
     &__container {
       grid-template-columns: repeat(4, 1fr);
     }

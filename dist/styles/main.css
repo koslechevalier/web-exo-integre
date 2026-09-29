@@ -288,7 +288,6 @@ section {
 }
 
 .nav {
-  width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -389,7 +388,6 @@ section {
   }
 }
 .footer {
-  width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -451,7 +449,6 @@ section {
 }
 
 .hero {
-  width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -552,7 +549,6 @@ section {
   }
 }
 .tuto {
-  width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -628,7 +624,6 @@ section {
 }
 
 .daily {
-  width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -784,7 +779,6 @@ section {
 }
 
 .category {
-  width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -804,14 +798,17 @@ section {
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
-.category__card {
+.category .container__card {
   padding: 1.5rem;
   background-color: #0B0D10;
   border: 1px solid rgba(229, 219, 202, 0.1);
 }
-.category__card .u-body-s {
+.category .container__card .u-body-s {
   margin: 0;
   color: #C5BAAA;
+}
+.category .card__header {
+  margin-bottom: 1rem;
 }
 .category__card-icon {
   display: block;
@@ -824,63 +821,8 @@ section {
   background-image: url("../../src/images/icons/categories.svg");
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-size: 800% 100%;
-}
-.category__card--action .category__card-title {
-  color: #E99292;
-}
-.category__card-icon--action {
-  background-color: #E99292;
-  background-position: calc( * 100% / 7) 50%;
-}
-.category__card--comedy .category__card-title {
-  color: #A6DDB8;
-}
-.category__card-icon--comedy {
-  background-color: #A6DDB8;
-  background-position: calc( * 100% / 7) 50%;
-}
-.category__card--drama .category__card-title {
-  color: #D775AC;
-}
-.category__card-icon--drama {
-  background-color: #D775AC;
-  background-position: calc( * 100% / 7) 50%;
-}
-.category__card--scifi .category__card-title {
-  color: #66B3E9;
-}
-.category__card-icon--scifi {
-  background-color: #66B3E9;
-  background-position: calc( * 100% / 7) 50%;
-}
-.category__card--horror .category__card-title {
-  color: #6FBAAE;
-}
-.category__card-icon--horror {
-  background-color: #6FBAAE;
-  background-position: calc( * 100% / 7) 50%;
-}
-.category__card--animation .category__card-title {
-  color: #E4A380;
-}
-.category__card-icon--animation {
-  background-color: #E4A380;
-  background-position: calc( * 100% / 7) 50%;
-}
-.category__card--classics .category__card-title {
-  color: #93C9C0;
-}
-.category__card-icon--classics {
-  background-color: #93C9C0;
-  background-position: calc( * 100% / 7) 50%;
-}
-.category__card--cult .category__card-title {
-  color: #EED886;
-}
-.category__card-icon--cult {
-  background-color: #EED886;
-  background-position: calc( * 100% / 7) 50%;
+  background-size: auto auto;
+  background-position: -1.5rem -1.5rem;
 }
 .category__card-title {
   margin: 0 0 0.5rem;
@@ -888,53 +830,77 @@ section {
   font-size: 32px;
   font-weight: 600;
 }
-.category__card--action .category__card-title {
+.card--action .category__card-title {
   color: #E99292;
 }
 .category__card-icon--action {
   background-color: #E99292;
 }
-.category__card--comedy .category__card-title {
+.card--comedy .category__card-title {
   color: #A6DDB8;
 }
 .category__card-icon--comedy {
   background-color: #A6DDB8;
 }
-.category__card--drama .category__card-title {
+.card--drama .category__card-title {
   color: #D775AC;
 }
 .category__card-icon--drama {
   background-color: #D775AC;
 }
-.category__card--scifi .category__card-title {
+.card--scifi .category__card-title {
   color: #66B3E9;
 }
 .category__card-icon--scifi {
   background-color: #66B3E9;
 }
-.category__card--horror .category__card-title {
+.card--horror .category__card-title {
   color: #6FBAAE;
 }
 .category__card-icon--horror {
   background-color: #6FBAAE;
 }
-.category__card--animation .category__card-title {
+.card--animation .category__card-title {
   color: #E4A380;
 }
 .category__card-icon--animation {
   background-color: #E4A380;
 }
-.category__card--classics .category__card-title {
+.card--classics .category__card-title {
   color: #93C9C0;
 }
 .category__card-icon--classics {
   background-color: #93C9C0;
 }
-.category__card--cult .category__card-title {
+.card--cult .category__card-title {
   color: #EED886;
 }
 .category__card-icon--cult {
   background-color: #EED886;
+}
+.category__card-icon--action {
+  background-position-x: -25px;
+}
+.category__card-icon--comedy {
+  background-position-x: -65px;
+}
+.category__card-icon--drama {
+  background-position-x: -105px;
+}
+.category__card-icon--scifi {
+  background-position-x: -145px;
+}
+.category__card-icon--horror {
+  background-position-x: -185px;
+}
+.category__card-icon--animation {
+  background-position-x: -225px;
+}
+.category__card-icon--classics {
+  background-position-x: -265px;
+}
+.category__card-icon--cult {
+  background-position-x: -305px;
 }
 @media (min-width: 768px) {
   .category__container {
@@ -942,9 +908,6 @@ section {
   }
 }
 @media (min-width: 1024px) {
-  .category {
-    padding: 4rem calc((100% - 1440px) / 2);
-  }
   .category__container {
     grid-template-columns: repeat(4, 1fr);
   }
