@@ -17,11 +17,10 @@
 //======FORME======//
 .hero__bg {
   position: absolute;
-  inset: 2% -2%;
+  inset: 2% -2% 2%;
   background-color: v.$color-teal;
   transform: rotate(-1deg);
   z-index: 0;
-  block-size: 38rem;
 }
 
 .hero__sub-subtitle {
@@ -100,13 +99,44 @@
 }
 
 //======RESPONSIVE_MOBILE======//
-@media (max-width: v.$bp-tablet) {
+@include m.mobile {
   .hero {
+    padding-inline: v.$space-md;
     flex-direction: column;
     text-align: center;
+    gap: v.$space-md;
+  }
+
+  .hero__bg {
+    inset: 0;
+    transform: none;
   }
 
   .hero__text {
     align-items: center;
+    order: 2;
+  }
+
+  .hero__image {
+    order: 1;
+    flex: 0 1 auto;
+    width: 60%;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+
+  .hero__sub-subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+
+  .hero__cta {
+    width: 100%;
+    padding-block: v.$space-md;
+    font-size: v.$fs-h4;
   }
 }

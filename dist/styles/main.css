@@ -503,11 +503,10 @@ section {
 
 .hero__bg {
   position: absolute;
-  inset: 2% -2%;
+  inset: 2% -2% 2%;
   background-color: #4DB2A1;
   transform: rotate(-1deg);
   z-index: 0;
-  block-size: 38rem;
 }
 
 .hero__sub-subtitle {
@@ -578,13 +577,39 @@ section {
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero {
+    padding-inline: 1.5rem;
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
+  }
+  .hero__bg {
+    inset: 0;
+    transform: none;
   }
   .hero__text {
     align-items: center;
+    order: 2;
+  }
+  .hero__image {
+    order: 1;
+    flex: 0 1 auto;
+    width: 60%;
+  }
+  .hero__title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+  .hero__sub-subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+  .hero__cta {
+    width: 100%;
+    padding-block: 1.5rem;
+    font-size: 22px;
   }
 }
 .tuto {
