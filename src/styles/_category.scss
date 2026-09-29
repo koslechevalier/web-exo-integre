@@ -22,7 +22,7 @@ $icons-count: 8;
   background-color: v.$color-dark;
   color: v.$color-cream;
   padding: v.$space-xl v.$space-md;
-  background-image: url('../../src/images/patterns/pattern-dark.png');
+  background-image: url('../../dist/images/patterns/pattern-dark.png');
   background-repeat: repeat;
   background-size: 200px auto;
 
@@ -61,7 +61,7 @@ $icons-count: 8;
   padding: 0.75rem;
   margin-bottom: v.$space-sm;
   border-radius: v.$radius-max;
-  background-image: url('../../src/images/icons/categories.svg');
+  background-image: url('../../dist/images/icons/categories.svg');
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: auto auto;
