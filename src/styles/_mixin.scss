@@ -13,7 +13,13 @@
 }
 
 //======MEDIA_QUERIES======//
-// Usage : @include m.tablet { ... }
+
+@mixin mobile {
+  @media (max-width: #{v.$bp-tablet - 1px}) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: v.$bp-tablet) {
     @content;
