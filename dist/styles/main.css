@@ -254,6 +254,8 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+  font-size: "Rubik", sans-serif;
+  font-style: "Recursive", sans-serif;
 }
 
 ul,
@@ -335,12 +337,13 @@ section {
   align-items: center;
   gap: 0.5rem;
   padding-block: 0.5rem;
-  font-weight: 600;
+  font-weight: 400;
   transition: opacity 0.2s ease;
+  font-style: "Recursive", sans-serif;
 }
 .nav__link img {
-  block-size: 18px;
-  inline-size: 18px;
+  block-size: 24px;
+  inline-size: 24px;
 }
 .nav__link:hover {
   opacity: 0.7;
