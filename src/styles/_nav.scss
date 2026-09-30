@@ -5,12 +5,13 @@
 
 .nav {
   @include m.container;
+  padding-inline: v.$space-xl;
+  padding-block: v.$space-lg;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: v.$space-sm;
-  padding-block: v.$space-lg;
   background-color: v.$color-cream;
   border-bottom: 0.8rem solid v.$color-black;
 }
@@ -69,7 +70,7 @@
 .nav__page-item .nav__link {
   position: relative;
   padding-bottom: calc(#{v.$space-xs} + 6px);
-  border-bottom: v.$border-inline-size dotted transparent;
+  border-bottom: v.$border-size-sm dotted transparent;
 
   &::after {
     content: '';
@@ -77,7 +78,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-bottom: v.$border-inline-size dotted transparent;
+    border-bottom: v.$border-size-sm dotted transparent;
   }
 }
 
@@ -98,7 +99,7 @@
 .nav__lang-item {
   .nav__link {
     padding: v.$space-xs v.$space-sm;
-    border: v.$border-inline-size dotted v.$color-light-grey;
+    border: v.$border-size-sm dotted v.$color-light-grey;
     color: v.$color-grey;
   }
 }

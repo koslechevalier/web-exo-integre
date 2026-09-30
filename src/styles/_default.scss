@@ -58,7 +58,7 @@ ol {
 
 //======ACCESSIBILITE_FOCUS======//
 :focus-visible {
-  outline: v.$border-size solid v.$color-yellow;
+  outline: v.$border-size-md solid v.$color-yellow;
   outline-offset: 2px;
 }
 

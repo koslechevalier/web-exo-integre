@@ -44,8 +44,8 @@
   //======STEP======//
   &__item {
     padding: v.$space-md 0;
-    border-top: v.$border-size dotted v.$color-grey;
-    border-bottom: v.$border-size dotted v.$color-grey;
+    border-top: v.$border-size-sm dotted v.$color-grey;
+    border-bottom: v.$border-size-sm dotted v.$color-grey;
   }
 
   &__step {

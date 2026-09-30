@@ -1,6 +1,6 @@
 //======COULEURS_NEUTRES======//
 $color-cream: #E5DBCA;
-$color-dark: #1E1E1E;
+$color-dark: #303333;
 $color-black: #0B0D10;
 $color-grey: #6A757E;
 $color-light-grey: #C5BAAA;
@@ -41,11 +41,13 @@ $space-md: 1.5rem;
 $space-lg: 2.5rem;
 $space-xl: 4rem;
 $space-xxl: 8rem;
+$space-xxxl: 12rem;
 
 //======RADIUS_BORDERS======//
 $radius-sm: 4px;
 $radius-md: 8px;
-$border-size: 2px;
+$border-size-sm: 2px;
+$border-size-md: 8px;
 $radius-max: 999px;
 
 //======BREAKPOINTS======//

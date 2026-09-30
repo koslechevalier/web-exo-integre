@@ -121,7 +121,7 @@
     color: v.$color-dark;
     font-weight: 700;
     text-align: center;
-    border: v.$border-size solid v.$color-yellow;
+    border: v.$border-size-sm solid v.$color-yellow;
     border-radius: v.$radius-sm;
     cursor: pointer;
     list-style: none;
@@ -138,7 +138,7 @@
     color: v.$color-yellow;
     font-weight: 700;
     text-align: center;
-    border: v.$border-width dashed v.$color-yellow;
+    border: v.$border-size-sm dashed v.$color-yellow;
     border-radius: v.$radius-sm;
   }
 
@@ -179,6 +179,6 @@
 
   //======DESKTOP======//
   @include m.desktop {
-    padding: v.$space-xl calc((100% - #{v.$container-max-width}) / 2) 3rem;
+    padding: v.$space-xl calc((100% - #{v.$container-max-inline-size}) / 2) 3rem;
   }
 }
