@@ -45,7 +45,7 @@ $space-xxl: 8rem;
 //======RADIUS_BORDERS======//
 $radius-sm: 4px;
 $radius-md: 8px;
-$border-width: 2px;
+$border-size: 2px;
 $radius-max: 999px;
 
 //======BREAKPOINTS======//
@@ -53,4 +53,4 @@ $bp-tablet: 768px;
 $bp-desktop: 1024px;
 
 //======LAYOUT======//
-$container-max-width: 1440px;
+$container-max-inline-size: 1440px;

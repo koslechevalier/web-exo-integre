@@ -22,8 +22,8 @@
 
   &__logo {
     display: block;
-    height: 2rem;
-    width: auto;
+    block-size: 2rem;
+    inline-size: auto;
   }
 
   &__copyright {
@@ -56,12 +56,12 @@
     }
   }
 
-  @media (min-width: v.$bp-tablet) {
+  @media (min-inline-size: v.$bp-tablet) {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  @media (min-width: v.$bp-desktop) {
-    padding: v.$space-md calc((100% - #{v.$container-max-width}) / 2);
+  @media (min-inline-size: v.$bp-desktop) {
+    padding: v.$space-md calc((100% - #{v.$container-max-inline-size}) / 2);
   }
 }

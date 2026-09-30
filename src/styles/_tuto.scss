@@ -44,8 +44,8 @@
   //======STEP======//
   &__item {
     padding: v.$space-md 0;
-    border-top: v.$border-width dotted v.$color-grey;
-    border-bottom: v.$border-width dotted v.$color-grey;
+    border-top: v.$border-size dotted v.$color-grey;
+    border-bottom: v.$border-size dotted v.$color-grey;
   }
 
   &__step {
@@ -75,14 +75,14 @@
   }
 
   //======TABLET======//
-  @media (min-width: v.$bp-tablet) {
+  @media (min-inline-size: v.$bp-tablet) {
     &__container {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
   //======DESKTOP======//
-  @media (min-width: v.$bp-desktop) {
-    padding: v.$space-xl calc((100% - #{v.$container-max-width}) / 2);
+  @media (min-inline-size: v.$bp-desktop) {
+    padding: v.$space-xl calc((100% - #{v.$container-max-inline-size}) / 2);
   }
 }

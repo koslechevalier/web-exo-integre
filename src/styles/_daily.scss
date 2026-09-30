@@ -71,8 +71,8 @@
       position: absolute;
       top: 2rem;
       left: -1.9rem;
-      width: 2rem;
-      height: 2rem;
+      inline-size: 2rem;
+      block-size: 2rem;
       background-color: v.$color-dark;
       clip-path: polygon(100% 0, 0 0, 100% 100%);
     }
@@ -121,7 +121,7 @@
     color: v.$color-dark;
     font-weight: 700;
     text-align: center;
-    border: v.$border-width solid v.$color-yellow;
+    border: v.$border-size solid v.$color-yellow;
     border-radius: v.$radius-sm;
     cursor: pointer;
     list-style: none;
