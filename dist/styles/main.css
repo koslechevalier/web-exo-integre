@@ -232,11 +232,11 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 48px;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 40px;
 }
 
 h4 {
@@ -254,7 +254,7 @@ p {
 a {
   color: inherit;
   text-decoration: none;
-  font-size: "Rubik", sans-serif;
+  font-size: 17px;
   font-style: "Recursive", sans-serif;
 }
 
@@ -296,9 +296,8 @@ section {
   padding-inline: 4rem;
   padding-block: 2.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  align-items: center;
   gap: 1rem;
   background-color: #E5DBCA;
   border-bottom: 0.8rem solid #0B0D10;
@@ -307,8 +306,9 @@ section {
 .nav__menu {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .nav__logo {
@@ -325,7 +325,7 @@ section {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .nav__page-item {
@@ -407,11 +407,12 @@ section {
   border-radius: 2px;
 }
 
-@media (max-inline-size: 767px) {
+@media (max-width: 767px) {
   .nav__burger {
     display: flex;
   }
   .nav {
+    display: flex;
     flex-wrap: wrap;
   }
   .nav__menu {
@@ -554,9 +555,9 @@ section {
   padding: 1rem 1.5rem;
   background: linear-gradient(0deg, rgb(238, 180, 36) 0%, rgb(212, 162, 36) 30%, rgb(196, 150, 33) 50%, rgb(212, 162, 36) 70%, rgb(238, 180, 36) 100%);
   color: #0B0D10;
+  font-size: 22px;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 1.8rem;
+  line-height: 1.4rem;
   border: 8px solid #0B0D10;
   transition: transform 0.15s ease;
 }
@@ -584,7 +585,7 @@ section {
   block-size: auto;
 }
 
-@media (max-inline-size: 767px) {
+@media (max-width: 767px) {
   .hero {
     padding-inline: 1.5rem;
     flex-direction: column;
@@ -624,6 +625,9 @@ section {
   margin-inline: auto;
   padding-inline: 1rem;
   padding-block: 4rem;
+  padding: 8rem 4rem;
+  background-color: #303333;
+  color: #E5DBCA;
 }
 .tuto__header {
   margin-bottom: 2.5rem;
@@ -636,26 +640,10 @@ section {
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
-@media (min-inline-size: 768px) {
+@media (min-width: 768px) {
   .tuto__container {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-.tuto {
-  background-color: #303333;
-  color: #E5DBCA;
-  padding: 8rem 8rem;
-}
-.tuto__header {
-  margin-bottom: 2.5rem;
-}
-.tuto__container {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
 }
 .tuto__item {
   padding: 1.5rem 0;
@@ -683,16 +671,6 @@ section {
   margin: 0;
   color: #C5BAAA;
 }
-@media (min-inline-size: 768px) {
-  .tuto__container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-inline-size: 1024px) {
-  .tuto {
-    padding: 4rem calc((100% - 1440px) / 2);
-  }
-}
 
 .daily {
   max-inline-size: 1440px;
@@ -703,13 +681,15 @@ section {
   z-index: 1;
   background-color: #EA5C67;
   color: #303333;
-  padding: 1rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
   background-image: url("../../dist/images/patterns/pattern-red.png");
   background-repeat: repeat;
   background-size: 200px auto;
+}
+.daily__box-bottom {
+  gap: 4rem;
 }
 .daily__image {
   position: relative;
@@ -788,18 +768,22 @@ section {
 }
 .daily .reveal__answer {
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .daily .reveal__trigger {
   display: block;
   padding: 0.5rem 1.5rem;
-  background-color: #EEB424;
+  background: linear-gradient(0deg, rgb(238, 180, 36) 0%, rgb(212, 162, 36) 30%, rgb(196, 150, 33) 50%, rgb(212, 162, 36) 70%, rgb(238, 180, 36) 100%);
   color: #303333;
   font-weight: 700;
   text-align: center;
-  border: 2px solid #EEB424;
-  border-radius: 4px;
   cursor: pointer;
   list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .daily .reveal__trigger::-webkit-details-marker {
   display: none;
@@ -812,18 +796,25 @@ section {
   font-weight: 700;
   text-align: center;
   border: 2px dashed #EEB424;
-  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .daily .reveal__answer[open] .reveal__trigger {
   position: absolute;
   inset: 0;
   opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .daily .reveal__answer[open]:focus-within .reveal__content {
-  outline: 2px solid #E5DBCA;
-  outline-offset: 2px;
+  outline-offset: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-@media (min-inline-size: 768px) {
+@media (min-width: 768px) {
   .daily {
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -843,9 +834,10 @@ section {
     grid-row: 1/span 2;
   }
 }
-@media (min-inline-size: 1024px) {
+@media (min-width: 1024px) {
   .daily {
-    padding: 4rem calc((100% - 1440px) / 2) 3rem;
+    padding-inline: 8rem;
+    padding-block: 4rem 0;
   }
 }
 
@@ -856,7 +848,7 @@ section {
   padding-block: 4rem;
   background-color: #303333;
   color: #E5DBCA;
-  padding: 4rem 1.5rem;
+  padding: 4rem 4rem;
   background-image: url("../../dist/images/patterns/pattern-dark.png");
   background-repeat: repeat;
   background-size: 200px auto;
@@ -898,7 +890,7 @@ section {
 .category__card-title {
   margin: 0 0 0.5rem;
   font-family: "Rubik", sans-serif;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 600;
 }
 .card--action .category__card-title {
@@ -973,12 +965,12 @@ section {
 .category__card-icon--cult {
   background-position-x: -305px;
 }
-@media (min-inline-size: 768px) {
+@media (min-width: 768px) {
   .category__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-inline-size: 1024px) {
+@media (min-width: 1024px) {
   .category__container {
     grid-template-columns: repeat(4, 1fr);
   }

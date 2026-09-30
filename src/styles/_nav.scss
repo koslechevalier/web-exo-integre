@@ -8,9 +8,8 @@
   padding-inline: v.$space-xl;
   padding-block: v.$space-lg;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  align-items: center;
   gap: v.$space-sm;
   background-color: v.$color-cream;
   border-bottom: 0.8rem solid v.$color-black;
@@ -19,8 +18,9 @@
 .nav__menu {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: v.$space-lg;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 //======LOGO======//
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   gap: v.$space-md;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .nav__page-item {
@@ -139,6 +139,7 @@
   }
 
   .nav {
+    display: flex;
     flex-wrap: wrap;
   }
 

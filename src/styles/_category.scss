@@ -21,7 +21,7 @@ $icons-count: 8;
   @include m.section-spacing;
   background-color: v.$color-dark;
   color: v.$color-cream;
-  padding: v.$space-xl v.$space-md;
+  padding: v.$space-xl v.$space-xl;
   background-image: url('../../dist/images/patterns/pattern-dark.png');
   background-repeat: repeat;
   background-size: 200px auto;

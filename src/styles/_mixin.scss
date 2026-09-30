@@ -1,33 +1,29 @@
 @use 'variables' as v;
 
-//======CONTENEUR_CENTRE======//
 @mixin container {
   max-inline-size: v.$container-max-inline-size;
   margin-inline: auto;
   padding-inline: v.$space-sm;
 }
 
-//======PADDING_VERTICAL_SECTION======//
 @mixin section-spacing {
   padding-block: v.$space-xl;
 }
 
-//======MEDIA_QUERIES======//
-
 @mixin mobile {
-  @media (max-inline-size: #{v.$bp-tablet - 1px}) {
+  @media (max-width: #{v.$bp-tablet - 1px}) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-inline-size: v.$bp-tablet) {
+  @media (min-width: v.$bp-tablet) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-inline-size: v.$bp-desktop) {
+  @media (min-width: v.$bp-desktop) {
     @content;
   }
 }

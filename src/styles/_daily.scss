@@ -9,13 +9,13 @@
   z-index: 1;
   background-color: v.$color-coral;
   color: v.$color-dark;
-  padding: v.$space-sm v.$space-sm;
   display: grid;
   grid-template-columns: 1fr;
   gap: v.$space-lg;
   background-image: url('../../dist/images/patterns/pattern-red.png');
   background-repeat: repeat;
   background-size: 200px auto;
+}
 
   //======IMAGE======//
   &__image {
@@ -112,19 +112,20 @@
   //======BOUTON======//
   .reveal__answer {
     position: relative;
+    user-select: none;
   }
 
   .reveal__trigger {
     display: block;
     padding: v.$space-xs v.$space-md;
-    background-color: v.$color-yellow;
+    background: linear-gradient(0deg, rgba(238, 180, 36, 1) 0%, rgba(212, 162, 36, 1) 30%, rgba(196, 150, 33, 1) 50%, rgba(212, 162, 36, 1) 70%, rgba(238, 180, 36, 1) 100%);
     color: v.$color-dark;
     font-weight: 700;
     text-align: center;
-    border: v.$border-size-sm solid v.$color-yellow;
-    border-radius: v.$radius-sm;
+
     cursor: pointer;
     list-style: none;
+    user-select: none;
 
     &::-webkit-details-marker {
       display: none;
@@ -139,18 +140,19 @@
     font-weight: 700;
     text-align: center;
     border: v.$border-size-sm dashed v.$color-yellow;
-    border-radius: v.$radius-sm;
+    user-select: none;
   }
 
   .reveal__answer[open] .reveal__trigger {
     position: absolute;
     inset: 0;
     opacity: 0;
+    user-select: none;
   }
 
   .reveal__answer[open]:focus-within .reveal__content {
-    outline: 2px solid v.$color-cream;
-    outline-offset: 2px;
+    outline-offset: 0px;
+    user-select: none;
   }
 
   //======TABLET======//
@@ -179,6 +181,7 @@
 
   //======DESKTOP======//
   @include m.desktop {
-    padding: v.$space-xl calc((100% - #{v.$container-max-inline-size}) / 2) 3rem;
+    padding-inline: v.$space-xxl;
+    padding-block: v.$space-xl 0;
   }
 }

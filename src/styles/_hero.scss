@@ -66,9 +66,9 @@
   padding: v.$space-sm v.$space-md;
   background: linear-gradient(0deg, rgba(238, 180, 36, 1) 0%, rgba(212, 162, 36, 1) 30%, rgba(196, 150, 33, 1) 50%, rgba(212, 162, 36, 1) 70%, rgba(238, 180, 36, 1) 100%);
   color: v.$color-black;
+  font-size: v.$fs-h4;
   font-weight: 700;
-  font-size: v.$fs-h3;
-  line-height: 1.8rem;
+  line-height: 1.4rem;
   border: v.$border-size-md solid v.$color-black;
   transition: transform 0.15s ease;
 
